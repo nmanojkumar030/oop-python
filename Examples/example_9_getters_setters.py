@@ -29,7 +29,7 @@ class Bike(object):
     @sale_price.setter
     def sale_price(self, sale_price):
         if self.sold:
-            raise MethodNotAllowed('Bike has already been sold')
+            raise MethodNotAllowed("Bike has already been sold")
         if sale_price < 0:
             raise ValueError("Sale price must be non-negative")
         else:
@@ -59,11 +59,11 @@ class Bike(object):
             description=f"A test {cls.__name__}",
             condition=random.choice(list(Condition)),
             sale_price=random.randrange(100, 500, 25),
-            cost=random.randrange(0, 100, 10)
+            cost=random.randrange(0, 100, 10),
         )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bike = Bike.get_test_object()  # Class method
 
     print(bike.sale_price)
@@ -73,4 +73,3 @@ if __name__ == '__main__':
 
     bike.sell()
     bike.sale_price = 999  # Exception raised
-

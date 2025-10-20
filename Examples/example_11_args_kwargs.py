@@ -13,7 +13,7 @@ class Shape(object):
         raise NotImplemented
 
     def __str__(self):
-        return f'{type(self).__name__} at ({self.x}, {self.y})'
+        return f"{type(self).__name__} at ({self.x}, {self.y})"
 
 
 class Circle(Shape):
@@ -22,7 +22,7 @@ class Circle(Shape):
         super().__init__(*args, **kwargs)
 
     def area(self):
-        return pi * self.r ** 2
+        return pi * self.r**2
 
     def circumference(self):
         return 2 * pi * self.r
@@ -46,8 +46,8 @@ class Square(Rectangle):
         super().__init__(length, length, *args, **kwargs)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     shapes = [Square(10, x=0, y=0), Circle(20, -1, 1), Rectangle(3.4, 1.5, 20, y=5)]
 
     for shape in shapes:
-        print(f'{shape} area is {shape.area()}')
+        print(f"{shape} area is {shape.area()}")

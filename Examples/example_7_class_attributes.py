@@ -30,7 +30,7 @@ class Bike(object):
 
     def update_sale_price(self, sale_price):
         if self.sold:
-            raise MethodNotAllowed('Bike has already been sold')
+            raise MethodNotAllowed("Bike has already been sold")
         self.sale_price = sale_price
 
     def sell(self):
@@ -51,13 +51,14 @@ class Bike(object):
         if self.condition:
             self.condition = condition
 
+
 class Tricycle(Bike):
     num_wheels = 3
 
 
-if __name__ == '__main__':
-    bike = Bike('Univega Alpina, orange', Condition.OKAY, sale_price=500, cost=100)
-    trike = Tricycle('Raleigh Talus 2', Condition.BAD, sale_price=20)
+if __name__ == "__main__":
+    bike = Bike("Univega Alpina, orange", Condition.OKAY, sale_price=500, cost=100)
+    trike = Tricycle("Raleigh Talus 2", Condition.BAD, sale_price=20)
 
     # All print 2
     print(trike.num_wheels)

@@ -24,7 +24,7 @@ class Bike(object):
 
     def update_sale_price(self, sale_price):
         if self.sold:
-            raise MethodNotAllowed('Bike has already been sold')
+            raise MethodNotAllowed("Bike has already been sold")
         self.sale_price = sale_price
 
     def sell(self):
@@ -57,7 +57,7 @@ class Bike(object):
             description="A test bike",
             condition=random.choice(list(Condition)),
             sale_price=random.randrange(100, 500, 25),
-            cost=random.randrange(0, 100, 10)
+            cost=random.randrange(0, 100, 10),
         )
 
     @classmethod
@@ -66,7 +66,7 @@ class Bike(object):
             description=f"A test {cls.__name__}",
             condition=random.choice(list(Condition)),
             sale_price=random.randrange(100, 500, 25),
-            cost=random.randrange(0, 100, 10)
+            cost=random.randrange(0, 100, 10),
         )
 
     def __str__(self):
@@ -77,7 +77,7 @@ class Trike(Bike):
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     bike = Bike.get_test_bike()  # Class method
     print(bike)
@@ -85,6 +85,5 @@ if __name__ == '__main__':
     print(bike.profit)  # Call property
 
     # Call methods on subclass
-    print(Trike.get_test_bike())    # staticmethod
+    print(Trike.get_test_bike())  # staticmethod
     print(Trike.get_test_object())  # classmethod
-

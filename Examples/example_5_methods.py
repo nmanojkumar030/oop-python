@@ -1,6 +1,7 @@
 """
 Bike class for use in a retail shop
 """
+
 from enum import Enum
 
 
@@ -26,7 +27,9 @@ class Bike:
 
     def update_sale_price(self, new_sale_price):
         if self.sold:
-            raise MethodNotAllowed("You can't update the sale price of a bike that's been sold")
+            raise MethodNotAllowed(
+                "You can't update the sale price of a bike that's been sold"
+            )
         self.sale_price = new_sale_price
 
     def sell(self):
@@ -42,7 +45,7 @@ class Bike:
             self.condition = new_condition
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     my_bike = Bike("Red Releigh cruiser", Condition.GOOD, 450, 50)
     print(my_bike)
 

@@ -20,7 +20,7 @@ class Circle(Shape):
         self.r = r
 
     def area(self):
-        return pi * self.r ** 2
+        return pi * self.r**2
 
     def circumference(self):
         return 2 * pi * self.r
@@ -43,8 +43,8 @@ class Square(Rectangle):
         super().__init__(length, length)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     shapes = [Square(10), Circle(20), Rectangle(3.4, 1.5)]
 
     for shape in shapes:
-        print(f'{shape} area is {shape.area()}')
+        print(f"{shape} area is {shape.area()}")
