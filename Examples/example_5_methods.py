@@ -3,6 +3,7 @@ Bike class for use in a retail shop
 """
 
 from enum import Enum
+import logging
 
 
 class Condition(Enum):
@@ -46,6 +47,7 @@ class Bike:
 
 
 if __name__ == "__main__":
+    logger = logging.getLogger(__name__)
     my_bike = Bike("Red Releigh cruiser", Condition.GOOD, 450, 50)
     print(my_bike)
 
@@ -55,4 +57,7 @@ if __name__ == "__main__":
 
     print(profit)
 
-    my_bike.update_sale_price(1000)
+    try:
+        my_bike.update_sale_price(1000)
+    except MethodNotAllowed as e:
+        logger.error("Error updating sale price after sale: %s", e)

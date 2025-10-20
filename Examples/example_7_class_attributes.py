@@ -60,8 +60,8 @@ if __name__ == "__main__":
     bike = Bike("Univega Alpina, orange", Condition.OKAY, sale_price=500, cost=100)
     trike = Tricycle("Raleigh Talus 2", Condition.BAD, sale_price=20)
 
-    # All print 2
     print(trike.num_wheels)
+    # All print 2
     print(bike.num_wheels)
     print(Bike.num_wheels)
 
